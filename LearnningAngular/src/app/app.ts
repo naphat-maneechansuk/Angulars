@@ -2,6 +2,12 @@ import { Component } from '@angular/core';
 import { Header } from './header/header';
 import { Item } from './item/item';
 
+interface employee {
+  id: number;
+  name: string;
+  salary: number;
+}
+
 @Component({
   selector: 'app-root',
   imports: [Header, Item],
@@ -9,7 +15,7 @@ import { Item } from './item/item';
   styleUrl: './app.css'
 })
 export class App {
-  data =[
+  data :employee[]=[
     {id:1, name:'pak' ,salary: 1000},
     {id:2, name:'pop' ,salary: 2000},
     {id:3, name:'poy' ,salary: 3000}
