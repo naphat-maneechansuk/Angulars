@@ -1,6 +1,6 @@
 <app-header title="เเอพของฉัน"/>
 <hr/>
-<app-add-form/>
+<app-add-form (onSave)="insertData($event)"/>
 @for (emp of data; track emp.id) {
 <app-item
   [id]="emp.id"
