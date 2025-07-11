@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Header } from './header/header';
 import { Item } from './item/item';
+import { AddForm } from './add-form/add-form';
 
 interface employee {
   id: number;
@@ -10,7 +11,7 @@ interface employee {
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Item],
+  imports: [Header, Item, AddForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
