@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgClass,NgStyle } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -25,11 +25,7 @@ export class App {
    clearData(){
       this.data = [];
    }
-   //
-    isActive = false;
-    toggleActive() {
-        this.isActive = !this.isActive;
-    }
+
     //pipe
 }
 

@@ -1,29 +1,6 @@
-<h1>ยินดีต้นรับ , {{userName}}</h1>
-<input type="text" [(ngModel)]="userName" placeholder="ใส่ชื่อของคุณ">
 
-@if (isLogin) {
-  <h4>ยินดีต้อนรับ</h4>
-  <button (click)="toggle()">ออกจากระบบ</button>
-}@else {
-  <h4>กรุณาเข้าสู่ระบบ</h4>
-  <button (click)="toggle()">เข้าสู่ระบบ</button>
-}
-
-@switch (userPermission) {
-  @case ("admin") {
-    <h4>สวัสดีผู้ดูแลระบบ</h4>
-  }
-  @case ("user") {
-    <h4>สวัสดีผู้ใช้</h4>
-  }
-  @default {
-    <h4>สวัสดีผู้เยี่ยมชม</h4>
-  }
-}
-
-
-<div [ngClass]="isActive ? 'dark':'light'">
-<h3 [ngStyle]="{'background':'red' , 'color':'white'}">ข้อมูลพนักงาน</h3>
+<div>
+<h3 >ข้อมูลพนักงาน</h3>
 @for (emp of data; track $index) {
   <h5>พนักงานคนที่ {{$index+1}} ชื่อ {{emp.name}} อายุ {{emp.age}} มาจาก {{emp.city}}</h5>
   <hr>
@@ -31,9 +8,7 @@
   <h5>ไม่มีข้อมูลพนักงาน</h5>
 }
 <button (click)="clearData()">ล้างข้อมูล</button>
-<button (click)="toggleActive()">
-  {{isActive ? 'เปลี่ยนเป็นโหมดสว่าง' : 'เปลี่ยนเป็นโหมดมืด'}}
-</button>
+
 </div>
 
 
