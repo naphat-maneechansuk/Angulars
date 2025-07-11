@@ -1,14 +1,18 @@
 
-<div>
+<div >
 <h3 >ข้อมูลพนักงาน</h3>
 @for (emp of data; track $index) {
-  <h5>พนักงานคนที่ {{$index+1}} ชื่อ {{emp.name}} อายุ {{emp.age}} มาจาก {{emp.city}}</h5>
+  <h5>พนักงานคนที่ {{$index+1}} </h5>
+  <h5>ชื่อ {{emp.name |uppercase}} </h5>
+  <p>อายุ {{emp.age}} </p>
+  <p>มาจาก {{emp.city|lowercase}} </p>
+  <p>เงินเดือน {{emp.salary | currency:'THB':'symbol':'1.2-2'}}</p>
+  <p>วันเริ่มงาน {{emp.startDate | date:'fullDate'}} </p>
   <hr>
 }@empty {
   <h5>ไม่มีข้อมูลพนักงาน</h5>
 }
 <button (click)="clearData()">ล้างข้อมูล</button>
-
 </div>
 
 
