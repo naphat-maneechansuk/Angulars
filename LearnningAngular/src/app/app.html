@@ -7,7 +7,7 @@
   <p>อายุ {{emp.age}} </p>
   <p>มาจาก {{emp.city|lowercase}} </p>
   <p>เงินเดือน {{emp.salary | currency:'THB':'symbol':'1.2-2'}}</p>
-  <p>วันเริ่มงาน {{emp.startDate | date:'fullDate'}} </p>
+  <p>วันเริ่มงาน {{emp.startDate | date:'fullDate'|lowercase}} </p>
   <hr>
 }@empty {
   <h5>ไม่มีข้อมูลพนักงาน</h5>
