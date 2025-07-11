@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { Header } from './header/header';
+import { Item } from './item/item';
 
 @Component({
   selector: 'app-root',
-  imports: [Header],
+  imports: [Header, Item],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+  data =[
+    {id:1, name:'pak' ,salary: 1000},
+    {id:2, name:'pop' ,salary: 2000},
+    {id:3, name:'poy' ,salary: 3000}
+  ]
 
 }
 
