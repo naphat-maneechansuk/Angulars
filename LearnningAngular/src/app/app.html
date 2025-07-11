@@ -1,14 +1,23 @@
-
 <div>
-<h3>ข้อมูลพนักงาน</h3>
-@for (emp of data; track $index) {
-  <h5>พนักงานคนที่ {{$index+1}} ชื่อ {{emp.name}} อายุ {{emp.age}} มาจาก {{emp.city}}</h5>
+  <div class="container">
+  <h1>ข้อมูลพนักงาน</h1>
+  <h2>ชื่อพนักงาน {{fname()}}</h2>
+  <h2>นามสกุล {{lname()}}</h2>
+  <h2>ชื่อเต็ม {{fullName()}}</h2>
+  <h2>ปนะสบการณ์ทำงาน {{exp()}} ปี</h2>
+  <h2>ประสบการณ์คูณสอง{{doubleExp()}}</h2>
+  <h4>ทักษะ</h4>
+  <ul>
+  @for (item of skill(); track $index) {
+    <li>{{item}}</li>
+  }
+</ul>
   <hr>
-}@empty {
-  <h5>ไม่มีข้อมูลพนักงาน</h5>
-}
-<button (click)="clearData()">ล้างข้อมูล</button>
+<button (click)="change()">สลับ</button>
+<button (click)="increment()">เพิ่ม</button>
+<button (click)="decrement()">ลด</button>
+</div>
+<div class="computed signals">
 
 </div>
-
-
+</div>
