@@ -1,15 +1,3 @@
-
-
-<div>
-<h3>ข้อมูลพนักงาน</h3>
-@for (emp of data; track $index) {
-  <h5>พนักงานคนที่ {{$index+1}} ชื่อ {{emp.name}} อายุ {{emp.age}} มาจาก {{emp.city}}</h5>
-  <hr>
-}@empty {
-  <h5>ไม่มีข้อมูลพนักงาน</h5>
-}
-<button (click)="clearData()">ล้างข้อมูล</button>
-
-</div>
+<app-header></app-header>
 
 
