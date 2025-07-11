@@ -7,12 +7,10 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  name="Naphat"
-  age=21
-  yearBE = new Date().getFullYear() + 543;
-  address= "Buurapha, Thailand"
-  showAddress(){
-    return "i'm from " + this.address;
+  imageurl = "https://picsum.photos/id/10/2500/1667"
+  size = 100
+  doubleSize(){
+    return this.size * 2;
   }
 }
 
