@@ -14,6 +14,11 @@ export class App {
     {id:2, name:'pop' ,salary: 2000},
     {id:3, name:'poy' ,salary: 3000}
   ]
+  removeDataById( id: number) {
+    alert(`ลบข้อมูลพนักงานคนที่ ${id} เรียบร้อยแล้ว`);
+    this.data = this.data.filter((emp)=> emp.id !== id);// filter out the employee with the given id
+
+  }
 
 }
 

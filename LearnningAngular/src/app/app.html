@@ -1,10 +1,14 @@
-<app-header title="Naphat"/>
-<app-header title="ณภัทร"/>
-<app-header title="who"/>
-<hr>
+<app-header title="Naphat" />
+<app-header title="ณภัทร" />
+<app-header title="who" />
+<hr />
 
 @for (emp of data; track emp.id) {
-<app-item [id]="emp.id" [name]="emp.name" [salary]="emp.salary"/>
+<app-item
+[id]="emp.id"
+[name]="emp.name"
+[salary]="emp.salary"
+(onDelete)="removeDataById($event)" />
 }@empty {
-  <p>ไม่มีข้อมูลพนักงาน</p>
+<p>ไม่มีข้อมูลพนักงาน</p>
 }
